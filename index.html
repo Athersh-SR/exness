@@ -21,7 +21,7 @@
                 </a>
                 <div class="optionBox">
                     <div class="usdBox">
-                        <button class="usdBtn d-flex">
+                        <button onclick="walletToggle()" class="usdBtn d-flex">
                             <svg xmlns="http://www.w3.org/2000/svg" width="23px" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round" class="tabler-icon tabler-icon-wallet">
@@ -35,6 +35,32 @@
                                 <span class="usD d-flex justify-content-center align-items-center">USD</span>
                             </div>
                         </button>
+                        <div id="balancedropdown" class="Balancedropdown hidden">
+                            <div class="balance-header">
+                                <span>Hide balance</span>
+                                <label class="toggle-switch">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                            </div>
+
+                            <div class="account-block">
+                                <div class="balance-amount"><strong>0.00</strong> USD</div>
+                                <div class="account-number">Trading account<br>#200908958</div>
+                                <div class="buttons">
+                                    <button>Transfer</button>
+                                    <button>Withdraw</button>
+                                </div>
+                            </div>
+
+                            <div class="wallet-block">
+                                <div class="balance-amount"><strong>0.00</strong> USD</div>
+                                <div class="wallet-copy">
+                                    <span>Investment wallet<br>#1171318500392759421</span>
+                                    <i class="fa fa-copy" title="Copy"></i>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="globeBox">
                         <button onclick="toggleDropdown()" class=" MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textNeutral
@@ -514,7 +540,7 @@
                     </ul>
                 </li>
                 <li class="nav-item nav_invite">
-                    <a class="sidebar-link" href="#">
+                    <a class="sidebar-link d-flex justify-content-center align-items-center" href="#">
                         <span class="icon-holder">
                             <svg width="24" height="24" viewBox="0 0 24 24" color="#141d22" fill="none">
                                 <path xmlns="http://www.w3.org/2000/svg" id="Vector"
@@ -770,7 +796,7 @@
                         </div>
                     </div>
                 </div>
-                <footer class="footer-section ">
+                <footer class="footer-section">
                     <div class="row">
                         <div class="col-lg-8 d-flex justify-content-center align-items-center">
                             <div class="info d-flex flex-column">
@@ -813,7 +839,7 @@
                         </div>
                     </div>
                 </footer>
-                
+
             </div>
             <div class="msgOption">
                 <a href="#">
@@ -830,100 +856,35 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./assets/js/custom-script.js"></script>
-    <script>
-        function toggleDropdown() {
-            const dropdown = document.getElementById('langDropdown');
-            dropdown.classList.toggle('hidden');
-        }
-        document.addEventListener('click', function (e) {
-            const globeBox = document.querySelector('.globeBox');
-            if (!globeBox.contains(e.target)) {
-                document.getElementById('langDropdown').classList.add('hidden');
-            }
-        });
-
-        function serviceToggleDropdown() {
-            const dropdown = document.getElementById('serviceDropdown');
-            dropdown.classList.toggle('hidden');
-        }
-        document.addEventListener('click', function (e) {
-            const serviceBox = document.querySelector('.serviceBox');
-            if (!serviceBox.contains(e.target)) {
-                document.getElementById('serviceDropdown').classList.add('hidden');
-            }
-        });
-
-        function NotificationToggle() {
-            const dropdown = document.getElementById('notificationDropdown');
-            dropdown.classList.toggle('hidden');
-        }
-        document.addEventListener('click', function (e) {
-            const bellBox = document.querySelector('.bellBox');
-            if (!bellBox.contains(e.target)) {
-                document.getElementById('notificationDropdown').classList.add('hidden');
-            }
-        });
-        function gridBoxToggle() {
-            const dropdown = document.getElementById('gridBoxDropdown');
-            dropdown.classList.toggle('hidden');
-        }
-        document.addEventListener('click', function (e) {
-            const gridBox = document.querySelector('.gridBox');
-            if (!gridBox.contains(e.target)) {
-                document.getElementById('gridBoxDropdown').classList.add('hidden');
-            }
-        });
-        function userToggle() {
-            const dropdown = document.getElementById('userBoxDropdown');
-            dropdown.classList.toggle('hidden');
-        }
-        document.addEventListener('click', function (e) {
-            const userBox = document.querySelector('.userBox');
-            if (!userBox.contains(e.target)) {
-                document.getElementById('userBoxDropdown').classList.add('hidden');
-            }
-        });
-        $(document).ready(function () {
-            $('.realdemo_box div').click(function () {
-                $('.realdemo_box div').removeClass('active');
-                $(this).addClass('active');
-
-                let selected = $(this).text().trim().toLowerCase();
-
-                if (selected === 'real') {
-                    $('.account_box1').show();
-                    $('.account_box2').hide();
-                } else if (selected === 'demo') {
-                    $('.account_box2').show();
-                    $('.account_box1').hide();
-                }
-            });
-
-
-            $('.account_box1').show();
-            $('.account_box2').hide();
-        });
-        $(document).ready(function () {
-            $('.mobile-toggle a').on('click', function (e) {
-                e.preventDefault();
-                $('.sidebar').toggleClass('sidebaropen');
-            });
-        });
-        $(document).ready(function () {
-            $('.real').click(function () {
-                $('.tab-underline').css('margin-left', '0');
-                $('.real').addClass('active');
-                $('.demo').removeClass('active');
-            });
-
-            $('.demo').click(function () {
-                $('.tab-underline').css('margin-left', '45px');
-                $('.demo').css('color', '#000000');
-                $('.demo').addClass('active');
-                $('.real').removeClass('active');
-            });
-        });
-    </script>
+    <script src="./assets/js/responsive-script.js"></script>
 </body>
 
 </html>
+
+
+<div id="balancedropdown" class="Balancedropdown hidden">
+    <div class="balance-header">
+        <span>Hide balance</span>
+        <label class="toggle-switch">
+            <input type="checkbox">
+            <span class="slider"></span>
+        </label>
+    </div>
+
+    <div class="account-block">
+        <div class="balance-amount">0.00 USD</div>
+        <div class="account-number">Trading account<br>#200908958</div>
+        <div class="buttons">
+            <button>Transfer</button>
+            <button>Withdraw</button>
+        </div>
+    </div>
+
+    <div class="wallet-block">
+        <div class="balance-amount">0.00 USD</div>
+        <div class="wallet-copy">
+            <span>Investment wallet<br>#1171318500392759421</span>
+            <i class="fa fa-copy" title="Copy"></i>
+        </div>
+    </div>
+</div>
