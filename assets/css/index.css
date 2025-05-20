@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap'); */
 
 
 * {
@@ -67936,14 +67936,14 @@ select {
   padding:6px;
 }
 .UserBoxDropdown .userAccount{
-  border-bottom:1px solid rgb(145, 163, 176);
+  border-bottom:1px solid #72777A;
 }
 
 .UserBoxDropdown .setting span:hover{
  background: rgba(108, 133, 149, 0.12);
 }
 #userBoxDropdown .setting span{
-  padding:10px 16px!important;
+  padding:13px 16px!important;
 }
 #userBoxDropdown .signOut{
   padding:10px 16px!important;
@@ -67984,4 +67984,10 @@ border-bottom:1px solid rgb(145, 163, 176)!important;
    position:fixed;
    right:15px;
    bottom:15px;
+}
+.account-details strong{
+  color:#141D22!important;
+}
+.footer-section{
+  margin-top: 60px;
 }
