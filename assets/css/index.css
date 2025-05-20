@@ -9,8 +9,8 @@
 
 :root {
   --f-country-simple-family: 'Space Grotesk', sans-serif;
-  --primary-color:#F0F0F0;
-  --primar-border-color:rgba(140, 69, 246, 0.2);
+  --primary-color: #F0F0F0;
+  --primar-border-color: rgba(140, 69, 246, 0.2);
 }
 
 .exness_header .navbar_img img {
@@ -150,11 +150,11 @@ svg {
 
 
 .sidebar ul {
-    list-style-type: none;
-    padding:8px 0px;
-    gap:3px;
-    display: flex;
-    flex-direction: column;
+  list-style-type: none;
+  padding: 8px 0px;
+  gap: 3px;
+  display: flex;
+  flex-direction: column;
 }
 
 .inviteBox button {
@@ -9086,7 +9086,7 @@ a.btn:hover {
 
   .sidebar .sidebar-inner .sidebar-menu {
     overflow-x: hidden;
-    padding:8px;
+    padding: 8px;
   }
 
   .sidebar .sidebar-inner .sidebar-menu>li>a .title {
@@ -21313,6 +21313,7 @@ footer {
 .jc-sa {
   justify-content: space-around;
 }
+
 @media screen and (min-width: 1200px) {
   .jc-fs\@lg\+ {
     justify-content: flex-start;
@@ -67600,14 +67601,18 @@ select {
   background-color: #f3f4f6;
 }
 
-.account_box1, .account_box2,.gridView_Sec{
+.account_box1,
+.account_box2,
+.gridView_Sec {
   border: 1px solid rgba(20, 29, 34, .122);
   padding: 20px;
   border-radius: 5px;
 }
-.account_box2{
-  display:none;
+
+.account_box2 {
+  display: none;
 }
+
 .account_box1 .accountBox_header_title .badge {
   font-size: 12px;
   font-family: var(--f-country-simple-family);
@@ -67625,6 +67630,7 @@ select {
   letter-spacing: 0.3px;
   color: rgb(20, 29, 34);
 }
+
 .account_box2 .accountBox_header_title .badge {
   font-size: 12px;
   font-family: var(--f-country-simple-family);
@@ -67711,6 +67717,7 @@ select {
   width: 100px;
   background-size: cover;
 }
+
 .about .box1,
 .box2,
 .box3 {
@@ -67743,6 +67750,7 @@ select {
   justify-content: center;
   align-items: center;
 }
+
 .drpdown {
   position: absolute;
   top: 100%;
@@ -67757,7 +67765,8 @@ select {
   overflow-y: hidden;
   font-family: sans-serif;
 }
-.drpdown:hover{
+
+.drpdown:hover {
   overflow-y: auto;
 }
 
@@ -67779,13 +67788,16 @@ select {
 .hidden {
   display: none;
 }
-.sidebar:hover{
+
+.sidebar:hover {
   overflow-x: auto;
 }
-.sidebar .sidebar-inner .sidebar-menu .nav_invite{
-   background: var(--primary-color);
-   border: 1px solid var(--primar-border-color)!important;
+
+.sidebar .sidebar-inner .sidebar-menu .nav_invite {
+  background: var(--primary-color);
+  border: 1px solid var(--primar-border-color) !important;
 }
+
 .ServiceDropdown {
   position: absolute;
   top: 100%;
@@ -67800,7 +67812,8 @@ select {
   overflow-y: hidden;
   font-family: sans-serif;
 }
-.ServiceDropdown:hover{
+
+.ServiceDropdown:hover {
   overflow-y: auto;
 }
 
@@ -67818,21 +67831,24 @@ select {
 .ServiceDropdown li:hover {
   background-color: #f2f2f2;
 }
-.ServiceDropdown .leftside h1{
-  font-size: 12px var( --f-country-simple-family);
+
+.ServiceDropdown .leftside h1 {
+  font-size: 12px var(--f-country-simple-family);
   padding: 20px 16px 4px;
-}
-.ServiceDropdown .rightside h1{
-  font-size: 12px var( --f-country-simple-family);
-  padding: 20px 16px 4px;
-}
-.ServiceDropdown ul li a{
-   font-size: 14px var( --f-country-simple-family);
-   color:#141D22;
 }
 
-.NotificationDropDown{
-   position: absolute;
+.ServiceDropdown .rightside h1 {
+  font-size: 12px var(--f-country-simple-family);
+  padding: 20px 16px 4px;
+}
+
+.ServiceDropdown ul li a {
+  font-size: 14px var(--f-country-simple-family);
+  color: #141D22;
+}
+
+.NotificationDropDown {
+  position: absolute;
   top: 100%;
   right: 0;
   background: white;
@@ -67842,25 +67858,41 @@ select {
   z-index: 1000;
   width: 379px;
   max-height: 445px;
-  font:14px sans-serif;
+  font: 14px sans-serif;
 }
-.NotificationDropDown .notification-text{
-  font-size:14px;
-  font-family:sans-serif;
+
+.NotificationDropDown .notification-text {
+  font-size: 14px;
+  font-family: sans-serif;
 }
-.mobile-nav{
-  display:flex;
+
+.mobile-nav {
+  display: flex;
 }
-.mobile-nav .mobile-toggle{
-  display:none;
+
+.mobile-nav .mobile-toggle {
+  display: none;
 }
-.desktop-nav{
-  display:flex;
+
+.desktop-nav {
+  display: flex;
 }
-.mobile-nav .mobile-toggle a{
-    color: #141D22;
+
+.mobile-nav .mobile-toggle a {
+  color: #141D22;
 }
-.account_Balance_container .current_amt strong{
-  font-size:36px;
-  color:#141D22;
+
+.account_Balance_container .current_amt strong {
+  font-size: 36px;
+  color: #141D22;
+}
+
+.sidebar .nav-item a:hover {
+  background: rgba(108, 133, 149, 0.12);
+  border-color: 1px solid rgb(145, 163, 176);
+}
+
+.NotificationDropDown .notification-content {
+  padding-top: 8px;
+  padding-left: 8px;
 }
