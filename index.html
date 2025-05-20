@@ -540,7 +540,9 @@
                         <span class="hashVal"># 200908958</span>
                     </div>
                     <div class="account_Balance_container d-flex justify-content-between">
-                        <span class="current_amt">0.00 USD</span>
+                        <span class="current_amt">
+                            <strong>0</strong>.00 USD
+                        </span>
                         <div class="button-section">
                             <button class="trade-btn"><svg width="16" height="16" fill="none" viewBox="0 0 16 16">
                                     <path
@@ -616,7 +618,8 @@
                         <span class="hashVal">#200908958</span>
                     </div>
                     <div class="account_Balance_container d-flex justify-content-between">
-                        <span class="current_amt">10,000.00 USD</span>
+                        <span class="current_amt">
+                            <strong>10,000</strong>.00 USD</span>
                         <div class="button-section">
                             <button class="trade-btn"><svg width="16" height="16" fill="none" viewBox="0 0 16 16">
                                     <path
@@ -784,6 +787,20 @@
             $('.mobile-toggle a').on('click', function (e) {
                 e.preventDefault();
                 $('.sidebar').toggleClass('sidebaropen');
+            });
+        });
+        $(document).ready(function () {
+            $('.real').click(function () {
+                $('.tab-underline').css('margin-left', '0');
+                $('.real').addClass('active');
+                $('.demo').removeClass('active');
+            });
+
+            $('.demo').click(function () {
+                $('.tab-underline').css('margin-left', '45px');
+                $('.demo').css('color', '#000000');
+                $('.demo').addClass('active');
+                $('.real').removeClass('active');
             });
         });
     </script>

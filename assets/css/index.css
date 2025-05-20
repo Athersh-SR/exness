@@ -9486,7 +9486,7 @@ a.btn:hover {
 }
 
 .main-content {
-  padding: 85px 20px 20px;
+  padding: 75px 20px 20px;
   min-height: calc(100vh - 61px);
 }
 
@@ -67539,9 +67539,10 @@ A VERTICAL event
 }
 
 .tab-underline {
-  width: 30px;
+  width: 40px;
   height: 3px;
   background-color: #000;
+  transition: margin-left 0.3s ease;
   margin-top: -3px;
 }
 
@@ -67858,4 +67859,8 @@ select {
 }
 .mobile-nav .mobile-toggle a{
     color: #141D22;
+}
+.account_Balance_container .current_amt strong{
+  font-size:36px;
+  color:#141D22;
 }
