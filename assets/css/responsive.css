@@ -124,6 +124,9 @@
     display: flex;
     align-items: center;
   }
+  .about .box-content{
+    padding: 6px!important;
+  }
 }
 
 @media screen and (min-width:991px) and (max-width:1436px) {
