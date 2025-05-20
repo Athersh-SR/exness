@@ -42687,122 +42687,6 @@ footer {
 .fillH-blue-a400:hover {
   fill: #2979ff !important;
 }
-
-.str-blue-a400,
-.strH-blue-a400:hover {
-  stroke: #2979ff !important;
-}
-
-.c-blue-a700,
-.cH-blue-a700:hover {
-  color: #2962ff !important;
-}
-
-.bgc-blue-a700,
-.bgcH-blue-a700:hover {
-  background-color: #2962ff !important;
-}
-
-.bdc-blue-a700,
-.bdcH-blue-a700:hover {
-  border-color: #2962ff !important;
-}
-
-.fill-blue-a700,
-.fillH-blue-a700:hover {
-  fill: #2962ff !important;
-}
-
-.str-blue-a700,
-.strH-blue-a700:hover {
-  stroke: #2962ff !important;
-}
-
-.c-light-blue-50,
-.cH-light-blue-50:hover {
-  color: #e1f5fe !important;
-}
-
-.bgc-light-blue-50,
-.bgcH-light-blue-50:hover {
-  background-color: #e1f5fe !important;
-}
-
-.bdc-light-blue-50,
-.bdcH-light-blue-50:hover {
-  border-color: #e1f5fe !important;
-}
-
-.fill-light-blue-50,
-.fillH-light-blue-50:hover {
-  fill: #e1f5fe !important;
-}
-
-.str-light-blue-50,
-.strH-light-blue-50:hover {
-  stroke: #e1f5fe !important;
-}
-
-.c-light-blue-100,
-.cH-light-blue-100:hover {
-  color: #b3e5fc !important;
-}
-
-.bgc-light-blue-100,
-.bgcH-light-blue-100:hover {
-  background-color: #b3e5fc !important;
-}
-
-.bdc-light-blue-100,
-.bdcH-light-blue-100:hover {
-  border-color: #b3e5fc !important;
-}
-
-.fill-light-blue-100,
-.fillH-light-blue-100:hover {
-  fill: #b3e5fc !important;
-}
-
-.str-light-blue-100,
-.strH-light-blue-100:hover {
-  stroke: #b3e5fc !important;
-}
-
-.c-light-blue-200,
-.cH-light-blue-200:hover {
-  color: #81d4fa !important;
-}
-
-.bgc-light-blue-200,
-.bgcH-light-blue-200:hover {
-  background-color: #81d4fa !important;
-}
-
-.bdc-light-blue-200,
-.bdcH-light-blue-200:hover {
-  border-color: #81d4fa !important;
-}
-
-.fill-light-blue-200,
-.fillH-light-blue-200:hover {
-  fill: #81d4fa !important;
-}
-
-.str-light-blue-200,
-.strH-light-blue-200:hover {
-  stroke: #81d4fa !important;
-}
-
-.c-light-blue-300,
-.cH-light-blue-300:hover {
-  color: #4fc3f7 !important;
-}
-
-.bdc-grey-900,
-.bdcH-grey-900:hover {
-  border-color: #313435 !important;
-}
-
 .fill-grey-900,
 .fillH-grey-900:hover {
   fill: #313435 !important;
@@ -42824,9 +42708,6 @@ footer {
   -ms-touch-action: auto;
 }
 
-/*
- * Scrollbar rail styles
- */
 .ps__rail-x {
   display: none;
   opacity: 0;
@@ -42876,9 +42757,6 @@ footer {
   opacity: 0.9;
 }
 
-/*
- * Scrollbar thumb styles
- */
 .ps__thumb-x {
   background-color: #aaa;
   border-radius: 6px;
