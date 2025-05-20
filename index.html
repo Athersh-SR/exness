@@ -149,7 +149,7 @@
                         </div>
                     </div>
                     <div class="gridBox">
-                        <button
+                        <button onclick="gridBoxToggle()"
                             class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textNeutral MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorNeutral MuiButton-disableElevation MuiButton-root MuiButton-text MuiButton-textNeutral MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorNeutral MuiButton-disableElevation muiltr-16rlj66"
                             tabindex="0" type="button" data-test="header-apps-drop-down-button">
                             <div class="IconWithBadge_container__YbN1M MuiBox-root muiltr-0"><span
@@ -170,6 +170,63 @@
                                         class="MuiBadge-badge MuiBadge-dot MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightRectangular MuiBadge-overlapRectangular MuiBadge-colorError muiltr-3tsv24"></span></span>
                             </div>
                         </button>
+                        <div id="gridBoxDropdown" class="GridBoxDropdown hidden">
+                            <ul class="list-unstyled">
+                                <li>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                        fill="none" stroke="black" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="tabler-icon tabler-icon-layout-grid">
+                                        <path
+                                            d="M4 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z">
+                                        </path>
+                                        <path
+                                            d="M14 4m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z">
+                                        </path>
+                                        <path
+                                            d="M4 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z">
+                                        </path>
+                                        <path
+                                            d="M14 14m0 1a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v4a1 1 0 0 1 -1 1h-4a1 1 0 0 1 -1 -1z">
+                                        </path>
+                                    </svg>
+                                    <span class="ps-1">Personal Area</span>
+                                </li>
+                                <li>
+                                    <svg width="16" height="16" fill="none" viewBox="0 0 16 16">
+                                        <path
+                                            d="M4.66797 2.66602V4.66602M4.66797 8.66602V13.3327M11.3346 2.66602V4.66602M11.3346 11.3327V13.3327M2.66797 5.33268C2.66797 5.15587 2.73821 4.9863 2.86323 4.86128C2.98826 4.73625 3.15782 4.66602 3.33464 4.66602H6.0013C6.17811 4.66602 6.34768 4.73625 6.47271 4.86128C6.59773 4.9863 6.66797 5.15587 6.66797 5.33268V7.99935C6.66797 8.17616 6.59773 8.34573 6.47271 8.47075C6.34768 8.59578 6.17811 8.66602 6.0013 8.66602H3.33464C3.15782 8.66602 2.98826 8.59578 2.86323 8.47075C2.73821 8.34573 2.66797 8.17616 2.66797 7.99935V5.33268ZM9.33464 5.33268C9.33464 5.15587 9.40487 4.9863 9.5299 4.86128C9.65492 4.73625 9.82449 4.66602 10.0013 4.66602H12.668C12.8448 4.66602 13.0143 4.73625 13.1394 4.86128C13.2644 4.9863 13.3346 5.15587 13.3346 5.33268V10.666C13.3346 10.8428 13.2644 11.0124 13.1394 11.1374C13.0143 11.2624 12.8448 11.3327 12.668 11.3327H10.0013C9.82449 11.3327 9.65492 11.2624 9.5299 11.1374C9.40487 11.0124 9.33464 10.8428 9.33464 10.666V5.33268Z"
+                                            stroke="black" stroke-width="1.33" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                    </svg>
+                                    <span class="ps-1">Exness Terminal</span>
+                                </li>
+
+                                <li>
+                                    <svg class="IconContainer_icon__XfQWv" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24"
+                                        viewBox="0 0 24 24">
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M3.49496 14.0105C3.27037 13.6867 3.10542 13.3337 3.00013 12.9508V12.9502H11.8918C11.9186 12.8054 11.9381 12.6532 11.9515 12.4949C11.9649 12.3367 11.9715 12.1718 11.9715 12.0001C11.9715 11.2472 11.8261 10.5382 11.5358 9.87108C11.2454 9.20461 10.8522 8.62336 10.3574 8.12853C9.86259 7.63309 9.28134 7.24052 8.61487 6.95019C7.9478 6.65987 7.23812 6.5144 6.48584 6.5144C5.73294 6.5144 5.02326 6.65987 4.3568 6.95019C3.69033 7.24113 3.10908 7.6337 2.61425 8.12853C2.11881 8.62336 1.72624 9.20461 1.43591 9.87108C1.14498 10.5382 1.00012 11.2478 1.00012 12.0001C1.00012 12.753 1.14559 13.4627 1.43591 14.1292C1.72624 14.7956 2.11942 15.3769 2.61425 15.8717C3.10908 16.3671 3.68972 16.7597 4.3568 17.05C5.02326 17.3404 5.73355 17.4858 6.48584 17.4858C7.04031 17.4858 7.57166 17.4067 8.07987 17.2485C8.58809 17.0902 9.05675 16.8693 9.48584 16.585C9.91494 16.3014 10.2978 15.9679 10.6344 15.585C10.9709 15.2022 11.2448 14.7865 11.456 14.3373H9.21804C8.94111 14.6678 8.57105 14.9612 8.10909 15.2186C7.64652 15.4755 7.10543 15.6045 6.48523 15.6045C6.07561 15.6045 5.68303 15.5388 5.30689 15.4067C4.93014 15.2746 4.59052 15.0896 4.2868 14.8522C3.98309 14.6142 3.71955 14.3343 3.49496 14.0105ZM9.48524 10.0001C9.70313 10.33 9.86442 10.6867 9.97032 11.0695V11.0701H3.00013C3.10542 10.6873 3.26732 10.3343 3.48522 10.0105C3.7025 9.68727 3.96666 9.40608 4.27706 9.1687C4.58747 8.93133 4.93075 8.74326 5.30689 8.60449C5.68303 8.46572 6.07561 8.39633 6.48523 8.39633C6.90763 8.39633 7.30385 8.46207 7.6733 8.59414C8.04275 8.72622 8.38298 8.91125 8.69339 9.14862C9.00319 9.38599 9.26734 9.67023 9.48524 10.0001Z"
+                                            fill="black"></path>
+                                        <path
+                                            d="M13.6532 6.515L12.3068 7.82176L16.3464 12.0001L12.3075 16.1784L13.6538 17.4852L17.6538 13.3464L21.6538 17.4852L23.0001 16.1784L18.9605 12.0001L22.9995 7.82176L21.6532 6.515L17.6532 10.6538L13.6532 6.515Z"
+                                            fill="black"></path>
+                                    </svg>
+                                    <span class="ps-1">Public Website</span>
+                                </li>
+                                <li>
+                                    <svg class="IconContainer_icon__XfQWv" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16"
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="M16.9999 17H20.3052C20.6919 17 21 16.6358 21 16.1958V15.4446C21 13.5478 19.6693 12 18.024 12H14.976M11 9.5C11 10.8807 9.88071 12 8.5 12C7.11929 12 6 10.8807 6 9.5C6 8.11929 7.11929 7 8.5 7C9.88071 7 11 8.11929 11 9.5ZM19 6.5C19 7.88071 17.8807 9 16.5 9C15.1193 9 14 7.88071 14 6.5C14 5.11929 15.1193 4 16.5 4C17.8807 4 19 5.11929 19 6.5ZM10.024 15C11.6693 15 13 16.5478 13 18.4446V19.1958C13 19.6358 12.6919 20 12.3052 20H4.69483C4.31464 20 4 19.6434 4 19.1958V18.4446C4 16.5402 5.33722 15 6.97596 15H10.024Z"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                    </svg>
+                                    <span class="ps-1">Partnership</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="userBox">
                         <button
@@ -761,6 +818,16 @@
             const bellBox = document.querySelector('.bellBox');
             if (!bellBox.contains(e.target)) {
                 document.getElementById('notificationDropdown').classList.add('hidden');
+            }
+        });
+         function gridBoxToggle() {
+            const dropdown = document.getElementById('gridBoxDropdown');
+            dropdown.classList.toggle('hidden');
+        }
+        document.addEventListener('click', function (e) {
+            const gridBox = document.querySelector('.gridBox');
+            if (!gridBox.contains(e.target)) {
+                document.getElementById('gridBoxDropdown').classList.add('hidden');
             }
         });
         $(document).ready(function () {

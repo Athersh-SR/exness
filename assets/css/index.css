@@ -67896,3 +67896,24 @@ select {
   padding-top: 8px;
   padding-left: 8px;
 }
+
+.GridBoxDropdown {
+  position: absolute;
+  top: 91%;
+  right: 43px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  margin-top: 8px;
+  z-index: 1000;
+  width: 263px;
+  max-height: 445px;
+  font: 14px sans-serif;
+  padding:6px;
+}
+
+.GridBoxDropdown li {
+  font-size: 14px;
+  font-family: sans-serif;
+  padding:8px 16px;
+}
