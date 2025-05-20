@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/index.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
@@ -229,7 +228,7 @@
                         </div>
                     </div>
                     <div class="userBox">
-                        <button
+                        <button onclick="userToggle()"
                             class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textNeutral MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorNeutral MuiButton-disableElevation MuiButton-root MuiButton-text MuiButton-textNeutral MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorNeutral MuiButton-disableElevation muiltr-16rlj66"
                             tabindex="0" type="button" data-test="header-user-drop-down-button">
                             <div class="IconWithBadge_container__YbN1M MuiBox-root muiltr-0"><span
@@ -244,6 +243,40 @@
                                         class="MuiBadge-badge MuiBadge-dot MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightRectangular MuiBadge-overlapRectangular MuiBadge-colorError muiltr-3tsv24"></span></span>
                             </div>
                         </button>
+                        <div id="userBoxDropdown" class="UserBoxDropdown hidden">
+                            <div class="userAccount d-flex gap-2">
+                                <div class="d-flex justify-content-center align-items-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="black" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="tabler-icon tabler-icon-user-circle">
+                                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
+                                        <path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                                        <path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855"></path>
+                                    </svg>
+                                </div>
+                                <div class="d-flex flex-column">
+
+                                    <span class="username">Adams</span>
+                                    <span class="usergmail">ad....46@gmail.com</span>
+                                </div>
+                            </div>
+                            <div class="setting d-flex flex-column">
+                                <span class="settings">Settings</span>
+                                <span class="Trading">Trading conditions</span>
+                            </div>
+                            <div class="signOut">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="black" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="tabler-icon tabler-icon-logout">
+                                    <path
+                                        d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2">
+                                    </path>
+                                    <path d="M9 12h12l-3 -3"></path>
+                                    <path d="M18 15l3 -3"></path>
+                                </svg>
+                                <span>Sign Out</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </nav>
@@ -780,10 +813,20 @@
                         </div>
                     </div>
                 </footer>
+                
+            </div>
+            <div class="msgOption">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" fill="black"
+                        class="bi bi-chat-left-dots" viewBox="0 0 16 16">
+                        <path
+                            d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z" />
+                        <path
+                            d="M5 6a1 1 0 1 1-2 0 1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0m4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
+                    </svg>
+                </a>
             </div>
         </main>
-
-
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./assets/js/custom-script.js"></script>
@@ -820,7 +863,7 @@
                 document.getElementById('notificationDropdown').classList.add('hidden');
             }
         });
-         function gridBoxToggle() {
+        function gridBoxToggle() {
             const dropdown = document.getElementById('gridBoxDropdown');
             dropdown.classList.toggle('hidden');
         }
@@ -828,6 +871,16 @@
             const gridBox = document.querySelector('.gridBox');
             if (!gridBox.contains(e.target)) {
                 document.getElementById('gridBoxDropdown').classList.add('hidden');
+            }
+        });
+        function userToggle() {
+            const dropdown = document.getElementById('userBoxDropdown');
+            dropdown.classList.toggle('hidden');
+        }
+        document.addEventListener('click', function (e) {
+            const userBox = document.querySelector('.userBox');
+            if (!userBox.contains(e.target)) {
+                document.getElementById('userBoxDropdown').classList.add('hidden');
             }
         });
         $(document).ready(function () {
