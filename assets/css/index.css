@@ -67753,7 +67753,7 @@ select {
 
 .drpdown {
   position: absolute;
-  top: 100%;
+  top: 118%;
   right: 0;
   background: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -67800,7 +67800,7 @@ select {
 
 .ServiceDropdown {
   position: absolute;
-  top: 100%;
+  top: 118%;
   right: 0;
   background: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -67849,7 +67849,7 @@ select {
 
 .NotificationDropDown {
   position: absolute;
-  top: 100%;
+  top: 118%;
   right: 0;
   background: white;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -67916,4 +67916,7 @@ select {
   font-size: 14px;
   font-family: sans-serif;
   padding:8px 16px;
+}
+.GridBoxDropdown li:hover{
+   background: rgba(108, 133, 149, 0.12);
 }
