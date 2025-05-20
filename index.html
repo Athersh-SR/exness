@@ -7,36 +7,18 @@
     <title>exness</title>
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
 <body>
     <header class="header_container">
         <div class="container-fluid">
-            <nav class="navbar d-flex justify-content-between">
+            <nav class="navbar desktop-nav justify-content-between">
                 <a class="navbar-brand" href="#">
-                    <!-- <div class="mobile-toggle sidebar-toggle">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="tabler-icon tabler-icon-menu-2">
-                                <path d="M4 6l16 0"></path>
-                                <path d="M4 12l16 0"></path>
-                                <path d="M4 18l16 0"></path>
-                            </svg>
-                    </div> -->
                     <div class="navbar_img">
                         <img src="./assets/img/exness_logo.svg" alt="exness_logo">
                     </div>
-                    <!-- <div class="notification_icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="tabler-icon tabler-icon-bell">
-                            <path
-                                d="M10 5a2 2 0 1 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6">
-                            </path>
-                            <path d="M9 17v1a3 3 0 0 0 6 0v-1"></path>
-                        </svg>
-                    </div> -->
                 </a>
                 <div class="optionBox">
                     <div class="usdBox">
@@ -89,7 +71,7 @@
                         </div>
                     </div>
                     <div class="serviceBox">
-                        <button
+                        <button onclick="serviceToggleDropdown()"
                             class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textNeutral MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorNeutral MuiButton-disableElevation MuiButton-root MuiButton-text MuiButton-textNeutral MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorNeutral MuiButton-disableElevation muiltr-16rlj66"
                             tabindex="0" type="button" data-test="header-helpmenu-drop-down">
                             <div class="IconWithBadge_container__YbN1M MuiBox-root muiltr-0"><span
@@ -104,9 +86,47 @@
                                         class="MuiBadge-badge MuiBadge-dot MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightRectangular MuiBadge-overlapRectangular MuiBadge-colorError muiltr-3tsv24"></span></span>
                             </div>
                         </button>
+                        <div id="serviceDropdown" class="ServiceDropdown hidden">
+                            <div class="d-flex">
+
+                                <div class="leftside">
+                                    <h1>Tool & Services</h1>
+                                    <ul>
+                                        <li><a href="#">MetaTrader 4</a></li>
+                                        <li><a href="#">MetaTrader 5</a></li>
+                                        <li><a href="#">WebTerminal</a></li>
+                                        <li><a href="#">Trader's Calculator</a></li>
+                                        <li><a href="#">Currency Converter</a></li>
+                                        <li><a href="#">Free VPS Hosting</a></li>
+                                        <li><a href="#">Economic calender</a></li>
+                                        <li><a href="#">Web Tv</a></li>
+                                        <li><a href="#">Tick History</a></li>
+                                    </ul>
+                                </div>
+                                <div class="rightside">
+                                    <h1>Trading</h1>
+                                    <ul>
+                                        <div>
+                                            <li><a href="#">Contract Specification</a></li>
+                                            <li><a href="#">Margin & Leverage</a></li>
+                                            <li><a href="#">WebTerminal</a></li>
+                                            <li><a href="#">Forex Market Trading Hours</a></li>
+                                            <li><a href="#">Dividends on indices</a></li>
+                                            <li><a href="#">Deposit and Withdrawals</a></li>
+                                        </div>
+                                        <div>
+                                            <h1>Help</h1>
+                                            <li><a href="#">Exness Help Center</a></li>
+                                            <li><a href="#">How to Become Our Partner</a></li>
+                                            <li><a href="#">Suggest a Feature</a></li>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="bellBox">
-                        <button
+                        <button onclick="NotificationToggle()"
                             class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textNeutral MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorNeutral MuiButton-disableElevation MuiButton-root MuiButton-text MuiButton-textNeutral MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorNeutral MuiButton-disableElevation muiltr-16rlj66"
                             tabindex="0" type="button" data-test="header-notification-drop-down-button">
                             <div class="IconWithBadge_container__YbN1M MuiBox-root muiltr-0"><span
@@ -122,6 +142,11 @@
                                         class="MuiBadge-badge MuiBadge-dot MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightRectangular MuiBadge-overlapRectangular MuiBadge-colorError muiltr-3tsv24"></span></span>
                             </div>
                         </button>
+                        <div id="notificationDropdown" class="NotificationDropDown hidden p-3">
+                            <div class="notification-content">
+                                <h1 class="notification-text">You currently have no new notifications</h1>
+                            </div>
+                        </div>
                     </div>
                     <div class="gridBox">
                         <button
@@ -165,12 +190,44 @@
                     </div>
                 </div>
             </nav>
+            <nav class="navbar mobile-nav justify-content-between">
+                <div class="mobile-toggle">
+                    <a href="#" class="text-decoration-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" fill="currentColor"
+                            class="bi bi-list" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+                        </svg>
+                    </a>
+                </div>
+                <a class="navbar-brand" href="#">
+                    <div class="navbar_img">
+                        <img src="./assets/img/exness_logo.svg" alt="exness_logo">
+                    </div>
+                </a>
+                <button
+                    class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textNeutral MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorNeutral MuiButton-disableElevation MuiButton-root MuiButton-text MuiButton-textNeutral MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorNeutral MuiButton-disableElevation muiltr-16rlj66"
+                    tabindex="0" type="button" data-test="header-notification-drop-down-button">
+                    <div class="IconWithBadge_container__YbN1M MuiBox-root muiltr-0"><span
+                            data-test="notification-count" class="MuiBadge-root muiltr-1rzb3uu"><svg
+                                xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="tabler-icon tabler-icon-bell">
+                                <path
+                                    d="M10 5a2 2 0 1 1 4 0a7 7 0 0 1 4 6v3a4 4 0 0 0 2 3h-16a4 4 0 0 0 2 -3v-3a7 7 0 0 1 4 -6">
+                                </path>
+                                <path d="M9 17v1a3 3 0 0 0 6 0v-1"></path>
+                            </svg><span
+                                class="MuiBadge-badge MuiBadge-dot MuiBadge-invisible MuiBadge-anchorOriginTopRight MuiBadge-anchorOriginTopRightRectangular MuiBadge-overlapRectangular MuiBadge-colorError muiltr-3tsv24"></span></span>
+                    </div>
+                </button>
+            </nav>
         </div>
     </header>
     <div class="sidebar">
         <div class="sidebar-inner">
             <ul class="sidebar-menu scrollable pos-r">
-                <li class="nav-item mT-30 active">
+                <li class="nav-item">
                     <a class="sidebar-link" href="#">
                         <span class="icon-holder">
                             <svg class="IconContainer_icon__XfQWv" xmlns="http://www.w3.org/2000/svg"
@@ -366,7 +423,7 @@
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item nav_invite">
                     <a class="sidebar-link" href="#">
                         <span class="icon-holder">
                             <svg width="24" height="24" viewBox="0 0 24 24" color="#141d22" fill="none">
@@ -376,7 +433,7 @@
                                     stroke-linejoin="round"></path>
                             </svg>
                         </span>
-                        <span class="title">invite friends and earn<br> money</span>
+                        <span class="title">Invite friends and earn<br> money</span>
                     </a>
                 </li>
             </ul>
@@ -490,7 +547,7 @@
                                         d="M4.66797 2.66602V4.66602M4.66797 8.66602V13.3327M11.3346 2.66602V4.66602M11.3346 11.3327V13.3327M2.66797 5.33268C2.66797 5.15587 2.73821 4.9863 2.86323 4.86128C2.98826 4.73625 3.15782 4.66602 3.33464 4.66602H6.0013C6.17811 4.66602 6.34768 4.73625 6.47271 4.86128C6.59773 4.9863 6.66797 5.15587 6.66797 5.33268V7.99935C6.66797 8.17616 6.59773 8.34573 6.47271 8.47075C6.34768 8.59578 6.17811 8.66602 6.0013 8.66602H3.33464C3.15782 8.66602 2.98826 8.59578 2.86323 8.47075C2.73821 8.34573 2.66797 8.17616 2.66797 7.99935V5.33268ZM9.33464 5.33268C9.33464 5.15587 9.40487 4.9863 9.5299 4.86128C9.65492 4.73625 9.82449 4.66602 10.0013 4.66602H12.668C12.8448 4.66602 13.0143 4.73625 13.1394 4.86128C13.2644 4.9863 13.3346 5.15587 13.3346 5.33268V10.666C13.3346 10.8428 13.2644 11.0124 13.1394 11.1374C13.0143 11.2624 12.8448 11.3327 12.668 11.3327H10.0013C9.82449 11.3327 9.65492 11.2624 9.5299 11.1374C9.40487 11.0124 9.33464 10.8428 9.33464 10.666V5.33268Z"
                                         stroke="black" stroke-width="1.33" stroke-linecap="round"
                                         stroke-linejoin="round"></path>
-                                </svg><span>Trade</span></button>
+                                </svg><span class="ps-1">Trade</span></button>
                             <button class="deposit-btn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                     stroke-linecap="round" stroke-linejoin="round"
@@ -499,7 +556,7 @@
                                     <path d="M8 12l4 4"></path>
                                     <path d="M12 8v8"></path>
                                     <path d="M16 12l-4 4"></path>
-                                </svg><span> Deposit</span></button>
+                                </svg><span class="ps-1"> Deposit</span></button>
                             <button class="withdraw-btn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                     stroke-linecap="round" stroke-linejoin="round"
@@ -556,7 +613,7 @@
                     <div class="accountBox_header_title d-flex gap-3 align-items-center">
                         <span class="badge ">Demo</span>
                         <span class="badge">Standard</span>
-                        <span class="hashVal"># 200908958</span>
+                        <span class="hashVal">#200908958</span>
                     </div>
                     <div class="account_Balance_container d-flex justify-content-between">
                         <span class="current_amt">10,000.00 USD</span>
@@ -566,7 +623,7 @@
                                         d="M4.66797 2.66602V4.66602M4.66797 8.66602V13.3327M11.3346 2.66602V4.66602M11.3346 11.3327V13.3327M2.66797 5.33268C2.66797 5.15587 2.73821 4.9863 2.86323 4.86128C2.98826 4.73625 3.15782 4.66602 3.33464 4.66602H6.0013C6.17811 4.66602 6.34768 4.73625 6.47271 4.86128C6.59773 4.9863 6.66797 5.15587 6.66797 5.33268V7.99935C6.66797 8.17616 6.59773 8.34573 6.47271 8.47075C6.34768 8.59578 6.17811 8.66602 6.0013 8.66602H3.33464C3.15782 8.66602 2.98826 8.59578 2.86323 8.47075C2.73821 8.34573 2.66797 8.17616 2.66797 7.99935V5.33268ZM9.33464 5.33268C9.33464 5.15587 9.40487 4.9863 9.5299 4.86128C9.65492 4.73625 9.82449 4.66602 10.0013 4.66602H12.668C12.8448 4.66602 13.0143 4.73625 13.1394 4.86128C13.2644 4.9863 13.3346 5.15587 13.3346 5.33268V10.666C13.3346 10.8428 13.2644 11.0124 13.1394 11.1374C13.0143 11.2624 12.8448 11.3327 12.668 11.3327H10.0013C9.82449 11.3327 9.65492 11.2624 9.5299 11.1374C9.40487 11.0124 9.33464 10.8428 9.33464 10.666V5.33268Z"
                                         stroke="black" stroke-width="1.33" stroke-linecap="round"
                                         stroke-linejoin="round"></path>
-                                </svg><span>Trade</span></button>
+                                </svg><span class="ps-1">Trade</span></button>
                             <button class="deposit-btn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                     viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                     stroke-linecap="round" stroke-linejoin="round"
@@ -575,7 +632,7 @@
                                     <path d="M8 12l4 4"></path>
                                     <path d="M12 8v8"></path>
                                     <path d="M16 12l-4 4"></path>
-                                </svg><span> Set Balance</span></button>
+                                </svg><span class="ps-1">Set Balance</span></button>
                             <button class="menu-btn">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -675,12 +732,32 @@
             const dropdown = document.getElementById('langDropdown');
             dropdown.classList.toggle('hidden');
         }
-
-        // Optional: Close dropdown when clicking outside
         document.addEventListener('click', function (e) {
             const globeBox = document.querySelector('.globeBox');
             if (!globeBox.contains(e.target)) {
                 document.getElementById('langDropdown').classList.add('hidden');
+            }
+        });
+
+        function serviceToggleDropdown() {
+            const dropdown = document.getElementById('serviceDropdown');
+            dropdown.classList.toggle('hidden');
+        }
+        document.addEventListener('click', function (e) {
+            const serviceBox = document.querySelector('.serviceBox');
+            if (!serviceBox.contains(e.target)) {
+                document.getElementById('serviceDropdown').classList.add('hidden');
+            }
+        });
+
+        function NotificationToggle() {
+            const dropdown = document.getElementById('notificationDropdown');
+            dropdown.classList.toggle('hidden');
+        }
+        document.addEventListener('click', function (e) {
+            const bellBox = document.querySelector('.bellBox');
+            if (!bellBox.contains(e.target)) {
+                document.getElementById('notificationDropdown').classList.add('hidden');
             }
         });
         $(document).ready(function () {
@@ -699,9 +776,15 @@
                 }
             });
 
-            // Set default state
+
             $('.account_box1').show();
             $('.account_box2').hide();
+        });
+        $(document).ready(function () {
+            $('.mobile-toggle a').on('click', function (e) {
+                e.preventDefault();
+                $('.sidebar').toggleClass('sidebaropen');
+            });
         });
     </script>
 </body>
